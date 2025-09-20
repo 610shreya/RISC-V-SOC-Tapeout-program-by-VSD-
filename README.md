@@ -28,26 +28,22 @@ This document provides step-by-step instructions for installing the open-source 
 
 ## 1️⃣ Yosys — RTL Synthesis
 
-# Clone Yosys repository
+### Clone Yosys repository
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
 
-# Install dependencies
+### Install dependencies
 sudo apt install make build-essential clang bison flex \
     libreadline-dev gawk tcl-dev libffi-dev git \
     graphviz xdot pkg-config python3 libboost-system-dev \
     libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
-# Build and install Yosys
+### Build and install Yosys
 make
 sudo make install
 
-
-# Week 0 — Task 0: EDA Tools Installation
-
-This document provides step-by-step instructions for installing the open-source EDA tools needed for RTL-to-GDSII flows.
-
 ---
+
 ## Icarus Verilog - Verilog Simulation
 
 ### Install Icarus Verilog
