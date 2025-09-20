@@ -20,12 +20,15 @@ This week focuses on preparing the development environment with essential open-s
 - **Ngspice**: Analog & Mixed-Signal Simulation
 - **Magic**: VLSI Layout Design & DRC Verification
 
-# Day 0 - Tools Installation
+# Week 0 — Task 0: EDA Tools Installation
 
-## Yosys
+This document provides step-by-step instructions for installing the open-source EDA tools needed for RTL-to-GDSII flows.
 
-```bash
-# Clone Yosys
+---
+
+## 1️⃣ Yosys — RTL Synthesis
+
+# Clone Yosys repository
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
 
@@ -35,53 +38,25 @@ sudo apt install make build-essential clang bison flex \
     graphviz xdot pkg-config python3 libboost-system-dev \
     libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
-##i-verilog
-
-# Build and install
+# Build and install Yosys
 make
 sudo make install
 
+
+# Week 0 — Task 0: EDA Tools Installation
+
+This document provides step-by-step instructions for installing the open-source EDA tools needed for RTL-to-GDSII flows.
+
+---
+## Icarus Verilog - Verilog Simulation
+
+### Install Icarus Verilog
 sudo apt update
 sudo apt install iverilog
 
-##GTKWave
+## GTKWave — Waveform Viewer
+
+### Install GTKWave
 sudo apt update
 sudo apt install gtkwave
 
-##Magic VLSI
-
-# Install dependencies
-sudo apt-get install m4 tcsh csh libx11-dev tcl-dev tk-dev \
-    libcairo2-dev mesa-common-dev libglu1-mesa-dev libncurses-dev \
-    libxpm-dev
-
-# Clone Magic
-git clone https://github.com/RTimothyEdwards/magic.git
-cd magic
-
-# Build and install
-./configure
-make
-sudo make install
-
-#### Advanced Flow Tools
-
-- **Docker**: Containerization Platform
-- **OpenLane**: Complete RTL-to-GDSII Flow
-
-### Key Learnings from Week 0
-
-- Successfully installed and verified open-source EDA tools ecosystem
-- Mastered environment setup for professional RTL design and synthesis workflows
-- Prepared comprehensive system for upcoming RTL → GDSII flow experiments
-- Established Docker-based OpenLane environment for automated design flows
-- Configured virtual machine with optimal specifications for EDA workloads
-
-###✅ Summary
-At the end of Day 0, the following tools should be working on your system:
-Yosys – RTL synthesis
-Icarus Verilog – Verilog simulation
-GTKWave – Waveform viewer
-Ngspice – Circuit simulation
-Magic – Layout & DRC verification
-OpenLane – Complete RTL-to-GDSII flow 
