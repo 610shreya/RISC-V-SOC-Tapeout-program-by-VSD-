@@ -1,1 +1,88 @@
+# Week 2 – BabySoC Fundamentals & Functional Modelling  
+**Part 2 – Labs (Hands-on Functional Modelling)**  
+
+---
+
+## 🎯 Objective  
+To build a **solid understanding of SoC fundamentals** and practice **functional modelling of BabySoC** using simulation tools:  
+- **Icarus Verilog (iverilog)** for compiling & simulating Verilog code.  
+- **GTKWave** for viewing and analyzing waveforms.  
+
+---
+
+## 🧪 Lab Reference  
+[VSDBabySoC Project Labs](https://github.com/hemanthkumardm/SFAL-VSD-SoC-Journey/tree/main/12.%20VSDBabySoC%20Project)  
+
+---
+
+## ⚙️ Tools Required  
+- **Icarus Verilog** → Verilog compiler & simulator  
+- **GTKWave** → Waveform viewer  
+
+---
+
+## 📝 Lab Steps  
+
+1. **Clone the BabySoC project repo**  
+   ```bash
+   git clone https://github.com/hemanthkumardm/SFAL-VSD-SoC-Journey.git
+   cd SFAL-VSD-SoC-Journey/12.\ VSDBabySoC\ Project
+   ```
+
+2. **Compile the Verilog modules**  
+   ```bash
+   iverilog -o baby_soc_tb.vvp baby_soc_tb.v
+   ```
+
+3. **Simulate and generate waveforms (.vcd)**  
+   ```bash
+   vvp baby_soc_tb.vvp
+   ```
+
+4. **View results in GTKWave**  
+   ```bash
+   gtkwave dump.vcd
+   ```
+
+5. **Analyze the following in GTKWave**  
+   - ✅ Reset operation  
+   - ✅ Clock generation & propagation  
+   - ✅ Dataflow between CPU, Memory, and Peripherals  
+
+---
+
+## 📊 Deliverables  
+
+- **Simulation logs** (output of compilation + run)  
+- **GTKWave screenshots**  
+  - Screenshot 1 → Reset signal behavior (expected: system starts cleanly after reset)  
+  - Screenshot 2 → Clock waveform (expected: stable clock toggling)  
+  - Screenshot 3 → Dataflow signals (CPU ↔ Memory ↔ Peripherals)  
+
+Each screenshot must have a **short explanation** of what the waveform represents.  
+
+---
+
+## 📚 Example Output (Template)  
+
+- **Simulation Log Snippet:**  
+   ```
+   $ iverilog -o baby_soc_tb.vvp baby_soc_tb.v
+   $ vvp baby_soc_tb.vvp
+   VCD info: dumpfile dump.vcd opened for output.
+   ```
+
+- **Screenshot 1 (Reset Waveform):**  
+  *Shows reset asserted low → CPU held in reset state → release triggers proper startup.*  
+
+- **Screenshot 2 (Clock):**  
+  *Stable periodic clock visible, toggling at defined simulation time units.*  
+
+- **Screenshot 3 (Dataflow):**  
+  *CPU reads from memory and writes to peripheral register — correct data transfer observed.*  
+
+---
+
+✅ This forms the **Week 2, Part 2 Submission**.  
+When you run it, just **replace the placeholder logs + screenshots with your actual results**.  
 
